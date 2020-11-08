@@ -191,10 +191,17 @@ Dict::Add('FR FR', 'French', 'Français', array(
 //
 
 Dict::Add('FR FR', 'French', 'Français', array(
-	'Class:PhysicalDevice/Attribute:dhcpoptionhosts_list' => 'Options DHCP',
-	'Class:PhysicalDevice/Attribute:dhcpoptionhosts_list+' => '',
 	'Class:PhysicalDevice/Tab:dhcpoptionhosts_list' => 'Options DHCP',
 	'Class:PhysicalDevice/Tab:dhcpoptionhosts_list+' => 'Liste de toutes les options DHCP de scope Host liées à l\'équipement',
+));
+
+//
+// Class: IPRange
+//
+
+Dict::Add('FR FR', 'French', 'Français', array(
+	'Class:IPRange/Tab:dhcpoptionpools_list' => 'Options DHCP ',
+	'Class:IPRange/Tab:dhcpoptionpools_list+' => 'Liste de toutes les options DHCP de scope Pool liées à la plage d\'IPs',
 ));
 
 //

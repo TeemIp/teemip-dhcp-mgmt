@@ -1,52 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
   <classes>
-    <class id="PhysicalDevice" _created_in="itop-config-mgmt" _delta="must_exist">
-      <fields>
-        <field id="dhcpoptionhosts_list" xsi:type="AttributeLinkedSet" _delta="define">
-          <linked_class>DHCPOptionHost</linked_class>
-          <ext_key_to_me>physicaldevice_id</ext_key_to_me>
-          <tracking_level/>
-          <edit_mode/>
-        </field>
-      </fields>
-      <methods>
-        <method id="DisplayBareRelations" _delta="define">
-          <comment/>
-          <static>false</static>
-          <access>public</access>
-          <type>Custom</type>
-          <code><![CDATA[ public function DisplayBareRelations(WebPage $oP, $bEditMode = false)
-    {
-        // Execute parent function first
-        parent::DisplayBareRelations($oP, $bEditMode);
-
-        if (!$bEditMode)
-        {
-          $aProfiles = UserRights::ListProfiles();
-          if (in_array('DHCP Manager', $aProfiles) || in_array('Administrator', $aProfiles))
-          {
-              // Search for host DHCP options
-              $sOQL = "SELECT DHCPOptionHost WHERE physicaldevice_id = :id";
-              $oOptionSet =  new CMDBObjectSet(DBObjectSearch::FromOQL($sOQL), array(), array('id' => $this->GetKey()));
-              if ($oOptionSet->CountExceeds(0))
-              {
-                  $iOptions = $oOptionSet->Count();
-                  $oP->SetCurrentTab(Dict::S('Class:PhysicalDevice/Tab:dhcpoptionhosts_list').' ('.$iOptions.')');
-                  $oP->p(MetaModel::GetClassIcon('DHCPOptionHost').'&nbsp;'.Dict::Format('Class:PhysicalDevice/Tab:dhcpoptionhosts_list+'));
-                  self::DisplaySet($oP, $oOptionSet, array('menu' => false));
-              }
-              else
-              {
-                  $oP->SetCurrentTab(Dict::S('Class:PhysicalDevice/Tab:dhcpoptionhosts_list'));
-                  $oP->p(MetaModel::GetClassIcon('DHCPOptionHost').'&nbsp;'.Dict::S('UI:NoObjectToDisplay'));
-              }
-          }
-        }
-    }]]></code>
-        </method>
-      </methods>
-    </class>
     <class id="DHCPClass" _delta="define">
       <properties>
         <category>bizmodel,searchable</category>
@@ -1558,4 +1512,131 @@
       </group>
     </groups>
   </user_rights>
+  <snippets>
+    <snippet id="TeemIpDHCPMgmt" _delta="define">
+      <placement>module</placement>
+      <module>teemip-dhcp-mgmt</module>
+      <rank>10</rank>
+      <content><![CDATA[
+/***************************************************************************
+ * Plugin to handle impacts on IPs when a CI is created, changed or deleted
+ */
+class DHCPMgmtApplicationUIExtension implements iApplicationUIExtension
+{
+	/**
+	 * @inheritdoc
+	 */
+	public function OnDisplayProperties($oObject, WebPage $oPage, $bEditMode = false)
+	{
+		// Do nothing
+	}
+
+	/**
+	 * @inheritdoc
+	 * @throws \Exception
+	 */
+	public function OnDisplayRelations($oObject, WebPage $oPage, $bEditMode = false)
+	{
+   	    // Add DHCP options tab on Physical devices linked to a DHCPOptionHost
+		if ($oObject instanceof PhysicalDevice)
+		{
+ 			if (!$bEditMode)
+			{
+				$aProfiles = UserRights::ListProfiles();
+				if (in_array('DHCP Manager', $aProfiles) || in_array('Administrator',$aProfiles))
+				{
+					// Search for host DHCP options
+					$sOQL = "SELECT DHCPOptionHost WHERE physicaldevice_id = :id";
+					$oOptionSet = new CMDBObjectSet(DBObjectSearch::FromOQL($sOQL), array(), array('id' => $oObject->GetKey()));
+					if ($oOptionSet->CountExceeds(0))
+					{
+						$iOptions = $oOptionSet->Count();
+						$oPage->SetCurrentTab(Dict::S('Class:PhysicalDevice/Tab:dhcpoptionhosts_list').' ('.$iOptions.')');
+						$oPage->p(MetaModel::GetClassIcon('DHCPOptionHost').'&nbsp;'.Dict::Format('Class:PhysicalDevice/Tab:dhcpoptionhosts_list+'));
+
+						$oBlock = new DisplayBlock($oOptionSet->GetFilter(), 'list', false);
+						$oBlock->Display($oPage, 'dhcp_options', array('menu' => false));
+					}
+				}
+			}
+		}
+
+		// Add DHCP options tab on IP Ranges linked to a DHCPOptionPool
+		if ($oObject instanceof IPRange)
+		{
+ 			if (!$bEditMode)
+			{
+				$aProfiles = UserRights::ListProfiles();
+				if (in_array('DHCP Manager', $aProfiles) || in_array('Administrator',$aProfiles))
+				{
+					// Search for host DHCP options
+					$sOQL = "SELECT DHCPOptionPool WHERE iprange_id = :id";
+					$oOptionSet = new CMDBObjectSet(DBObjectSearch::FromOQL($sOQL), array(), array('id' => $oObject->GetKey()));
+					if ($oOptionSet->CountExceeds(0))
+					{
+						$iOptions = $oOptionSet->Count();
+						$oPage->SetCurrentTab(Dict::S('Class:IPRange/Tab:dhcpoptionpools_list').' ('.$iOptions.')');
+						$oPage->p(MetaModel::GetClassIcon('DHCPOptionPool').'&nbsp;'.Dict::Format('Class:IPRange/Tab:dhcpoptionpools_list+'));
+
+						$oBlock = new DisplayBlock($oOptionSet->GetFilter(), 'list', false);
+						$oBlock->Display($oPage, 'dhcp_options', array('menu' => false));
+					}
+				}
+			}
+		}
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	public function OnFormSubmit($oObject, $sFormPrefix = '')
+	{
+		// Do nothing
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	public function OnFormCancel($sTempId)
+	{
+		// Do nothing
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	public function EnumUsedAttributes($oObject)
+	{
+		return array();
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	public function GetIcon($oObject)
+	{
+		return '';
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	public function GetHilightClass($oObject)
+	{
+		// Possible return values are:
+		// HILIGHT_CLASS_CRITICAL, HILIGHT_CLASS_WARNING, HILIGHT_CLASS_OK, HILIGHT_CLASS_NONE
+		return HILIGHT_CLASS_NONE;
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	public function EnumAllowedActions(DBObjectSet $oSet)
+	{
+		// No action
+		return array();
+	}
+}]]></content>
+    </snippet>
+  </snippets>
 </itop_design>

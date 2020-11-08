@@ -191,10 +191,17 @@ Dict::Add('EN US', 'English', 'English', array(
 //
 
 Dict::Add('EN US', 'English', 'English', array(
-	'Class:PhysicalDevice/Attribute:dhcpoptionhosts_list' => 'DHCP Options',
-	'Class:PhysicalDevice/Attribute:dhcpoptionhosts_list+' => '',
 	'Class:PhysicalDevice/Tab:dhcpoptionhosts_list' => 'DHCP Options',
 	'Class:PhysicalDevice/Tab:dhcpoptionhosts_list+' => 'List of all DHCP options attached to the Physical Device',
+));
+
+//
+// Class: IPRange
+//
+
+Dict::Add('EN US', 'English', 'English', array(
+	'Class:IPRange/Tab:dhcpoptionpools_list' => 'DHCP Options',
+	'Class:IPRange/Tab:dhcpoptionpools_list+' => 'List of all DHCP options attached to the IP Range',
 ));
 
 //
