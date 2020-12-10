@@ -1,0 +1,16 @@
+# <img src=https://wiki.teemip.net/lib/exe/fetch.php?media=extensions:classicon_dhcp.png"> TeemIp DHCP Management
+TeemIp extension that adds DHCP options management features
+
+
+## Description
+
+The TeemIp DHCP Management extension precisely allows network administrators to define and register the DHCP options that are used within their DHCP infrastructure. 
+
+## Documentation
+
+Comprehensive documentation can be found on TeemIp’s [wiki][1], namely in the chapter dedicated to the extension:
+
+[IP Discovery - Extension][2]
+
+[1]: https://wiki.teemip.net
+[2]: https://wiki.teemip.net/doku.php?id=extensions:teemip-dhcp-mgmt
