@@ -4,7 +4,7 @@ TeemIp extension that adds DHCP options management features
 
 ## Description
 
-The TeemIp DHCP Management extension precisely allows network administrators to define and register the DHCP options that are used within their DHCP infrastructure. 
+The TeemIp DHCP Management extension allows network administrators to define and register the DHCP options that are used within their DHCP infrastructure. 
 
 ## Documentation
 
