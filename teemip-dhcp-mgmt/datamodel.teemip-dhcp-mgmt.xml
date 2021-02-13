@@ -1376,6 +1376,9 @@
       <enable_class>DHCPOption</enable_class>
       <enable_action>UR_ACTION_MODIFY</enable_action>
       <enable_admin_only>0</enable_admin_only>
+      <style>
+        <decoration_classes>fas fa-hand-holding</decoration_classes>
+      </style>
     </menu>
     <menu id="DHCPSpace" xsi:type="DashboardMenuNode" _delta="define">
       <rank>10</rank>

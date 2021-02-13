@@ -23,7 +23,7 @@
 
 SetupWebPage::AddModule(
 	__FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-	'teemip-dhcp-mgmt/0.2.0',
+	'teemip-dhcp-mgmt/0.3.0',
 	array(
 		// Identification
 		//
