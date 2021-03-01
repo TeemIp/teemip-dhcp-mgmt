@@ -102,6 +102,8 @@ Dict::Add('EN US', 'English', 'English', array(
 	'Class:DHCPOptionPool/Name' => '%1$s',
 	'Class:DHCPOptionPool' => 'Pool DHCP Option',
 	'Class:DHCPOptionPool+' => 'DHCP option for pool scope',
+	'Class:DHCPOptionPool/Attribute:iprange_id_finalclass_recall' => 'IP Range Type',
+	'Class:DHCPOptionPool/Attribute:iprange_id_finalclass_recall+' => '',
 	'Class:DHCPOptionPool/Attribute:iprange_id' => 'IP Range',
 	'Class:DHCPOptionPool/Attribute:iprange_id+' => '',
 	'Class:DHCPOptionPool/Attribute:iprange_name' => 'IP Range name',

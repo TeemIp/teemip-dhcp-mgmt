@@ -102,6 +102,8 @@ Dict::Add('FR FR', 'French', 'Français', array(
 	'Class:DHCPOptionPool/Name' => '%1$s',
 	'Class:DHCPOptionPool' => 'Option DHCP Pool',
 	'Class:DHCPOptionPool+' => 'Option DHCP pour un scope pool',
+	'Class:DHCPOptionPool/Attribute:iprange_id_finalclass_recall' => 'Type de plage d\'IPs',
+	'Class:DHCPOptionPool/Attribute:iprange_id_finalclass_recall+' => '',
 	'Class:DHCPOptionPool/Attribute:iprange_id' => 'Plage d\'adresses',
 	'Class:DHCPOptionPool/Attribute:iprange_id+' => '',
 	'Class:DHCPOptionPool/Attribute:iprange_name' => 'Nom de la plage d\'adresses',
