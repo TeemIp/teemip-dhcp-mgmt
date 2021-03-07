@@ -280,7 +280,7 @@
         <category>bizmodel,searchable</category>
         <abstract>false</abstract>
         <db_table>dhcpoptionglobal</db_table>
-        <icon>images/global.png</icon>
+        <icon>asset/img/global.png</icon>
         <naming>
           <attributes>
             <attribute id="name"/>
@@ -408,7 +408,7 @@
         <category>bizmodel,searchable</category>
         <abstract>false</abstract>
         <db_table>dhcpoptionsharednetwork</db_table>
-        <icon>images/sharednetwork.png</icon>
+        <icon>asset/img/sharednetwork.png</icon>
         <naming _revision_id="457">
           <attributes>
             <attribute id="name"/>
@@ -577,7 +577,7 @@
             <attribute id="org_name"/>
           </attributes>
         </reconciliation>
-        <icon>images/subnet.png</icon>
+        <icon>asset/img/subnet.png</icon>
         <uniqueness_rules _revision_id="455"/>
       </properties>
       <fields>
@@ -722,7 +722,7 @@
         <category>bizmodel,searchable</category>
         <abstract>false</abstract>
         <db_table>dhcpoptionpool</db_table>
-        <icon>images/pool.png</icon>
+        <icon>asset/img/pool.png</icon>
         <naming>
           <attributes>
             <attribute id="name"/>
@@ -891,7 +891,7 @@
             <attribute id="org_name"/>
           </attributes>
         </reconciliation>
-        <icon>images/class.png</icon>
+        <icon>asset/img/class.png</icon>
         <uniqueness_rules/>
       </properties>
       <fields>
@@ -1043,7 +1043,7 @@
             <attribute id="org_name"/>
           </attributes>
         </reconciliation>
-        <icon>images/subclass.png</icon>
+        <icon>asset/img/subclass.png</icon>
         <uniqueness_rules/>
       </properties>
       <fields>
@@ -1200,7 +1200,7 @@
         <category>bizmodel,searchable</category>
         <abstract>false</abstract>
         <db_table>dhcpoptionhost</db_table>
-        <icon>images/host.png</icon>
+        <icon>asset/img/host.png</icon>
         <naming>
           <attributes>
             <attribute id="name"/>
@@ -1393,7 +1393,7 @@
               <dashlet id="teemip-dhcp-201" xsi:type="DashletHeaderStatic">
                 <rank>0</rank>
                 <title>DHCP Options</title>
-                <icon>teemip-dhcp-mgmt/images/dhcpobject.png</icon>
+                <icon>teemip-dhcp-mgmt/asset/img/dhcpobject.png</icon>
               </dashlet>
               <dashlet id="teemip-dhcp-202" xsi:type="DashletBadge">
                 <rank>1</rank>
