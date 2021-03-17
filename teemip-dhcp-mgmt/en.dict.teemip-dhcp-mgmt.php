@@ -127,7 +127,7 @@ Dict::Add('EN US', 'English', 'English', array(
 	'Class:DHCPOptionSubClass/Attribute:dhcpsubclass_id+' => '',
 	'Class:DHCPOptionSubClass/Attribute:dhcpsubclass_name' => 'DHCP SubClass name',
 	'Class:DHCPOptionSubClass/Attribute:dhcpsubclass_name+' => '',
-	'DHCPOptionSubClass:General' => 'Attributs DHCP',
+	'DHCPOptionSubClass:General' => 'DHCP Attributes',
 	'DHCPOptionSubClass:Scope' => 'Scope',
 ));
 
