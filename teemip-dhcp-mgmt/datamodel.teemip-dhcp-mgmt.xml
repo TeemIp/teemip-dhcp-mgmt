@@ -1388,11 +1388,11 @@
         <title/>
         <cells xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <cell id="teemip-dhcp-200">
-            <rank>0</rank>
+            <rank>2</rank>
             <dashlets>
               <dashlet id="teemip-dhcp-201" xsi:type="DashletHeaderStatic">
                 <rank>0</rank>
-                <title>DHCP Options</title>
+                <title>Menu:DHCPSpace:Options</title>
                 <icon>teemip-dhcp-mgmt/asset/img/dhcpobject.png</icon>
               </dashlet>
               <dashlet id="teemip-dhcp-202" xsi:type="DashletBadge">
@@ -1428,60 +1428,72 @@
         </cells>
       </definition>
     </menu>
-    <menu xsi:type="NewObjectMenuNode" id="NewDHCPOption" _delta="define">
+    <menu id="DHCPServers" xsi:type="OQLMenuNode" _delta="define">
       <parent>DHCPSpace</parent>
-      <rank>0</rank>
+      <rank>10</rank>
+      <oql>SELECT FunctionalCI AS f JOIN lnkFunctionalCIToIPRange AS l ON l.functionalci_id = f.id JOIN IPRange AS ir ON l.iprange_id = ir.id WHERE ir.dhcp = 'dhcp_yes'</oql>
+      <do_search>1</do_search>
+    </menu>
+    <menu id="DHCPRanges" xsi:type="OQLMenuNode" _delta="define">
+      <parent>DHCPSpace</parent>
+      <rank>20</rank>
+      <oql>SELECT IPRange WHERE dhcp = 'dhcp_yes'</oql>
+      <do_search>1</do_search>
+    </menu>
+    <menu id="DHCPOptions" xsi:type="TemplateMenuNode" _delta="define">
+      <parent>DHCPManagement</parent>
+      <rank>40</rank>
+    </menu>
+    <menu id="NewDHCPOption" xsi:type="NewObjectMenuNode" _delta="define">
+      <parent>DHCPOptions</parent>
+      <rank>10</rank>
       <class>DHCPOption</class>
     </menu>
-    <menu xsi:type="OQLMenuNode" id="SearchDHCPOption" _delta="define">
-      <parent>DHCPSpace</parent>
-      <rank>1</rank>
+    <menu id="SearchDHCPOption" xsi:type="OQLMenuNode" _delta="define">
+      <parent>DHCPOptions</parent>
+      <rank>20</rank>
       <oql>SELECT DHCPOption</oql>
       <do_search>1</do_search>
     </menu>
-    <menu xsi:type="TemplateMenuNode" id="DHCPShortcut" _delta="define">
-      <parent>DHCPManagement</parent>
-      <rank>20</rank>
-    </menu>
-    <menu xsi:type="OQLMenuNode" id="DHCPGlobalOption" _delta="define">
-      <parent>DHCPShortcut</parent>
-      <rank>1</rank>
+    <menu id="DHCPGlobalOption" xsi:type="OQLMenuNode" _delta="define">
+      <parent>DHCPOptions</parent>
+      <rank>30</rank>
       <oql>SELECT DHCPOptionGlobal</oql>
       <do_search>1</do_search>
     </menu>
-    <menu xsi:type="OQLMenuNode" id="DHCPSharedNetworkOption" _delta="define">
-      <parent>DHCPShortcut</parent>
-      <rank>2</rank>
+    <menu id="DHCPSharedNetworkOption" xsi:type="OQLMenuNode" _delta="define">
+      <parent>DHCPOptions</parent>
+      <rank>40</rank>
       <oql>SELECT DHCPOptionSharedNetwork</oql>
       <do_search>1</do_search>
     </menu>
-    <menu xsi:type="OQLMenuNode" id="DHCPSubnetOption" _delta="define">
-      <parent>DHCPShortcut</parent>
-      <rank>3</rank>
+    <menu id="DHCPSubnetOption" xsi:type="OQLMenuNode" _delta="define">
+      <parent>DHCPOptions</parent>
+      <rank>50</rank>
       <oql>SELECT DHCPOptionSubnet</oql>
       <do_search>1</do_search>
     </menu>
-    <menu xsi:type="OQLMenuNode" id="DHCPPoolOption" _delta="define">
-      <parent>DHCPShortcut</parent>
-      <rank>4</rank>
+    <menu id="DHCPPoolOption" xsi:type="OQLMenuNode" _delta="define">
+      <parent>DHCPOptions</parent>
+      <rank>60</rank>
       <oql>SELECT DHCPOptionPool</oql>
       <do_search>1</do_search>
     </menu>
-    <menu xsi:type="OQLMenuNode" id="DHCPClassOption" _delta="define">
-      <parent>DHCPShortcut</parent>
-      <rank>5</rank>
+    <menu id="DHCPClassOption" xsi:type="OQLMenuNode" _delta="define">
+      <parent>DHCPOptions</parent>
+      <rank>70</rank>
       <oql>SELECT DHCPOptionClass</oql>
       <do_search>1</do_search>
     </menu>
-    <menu xsi:type="OQLMenuNode" id="DHCPSubClassOption" _delta="define">
-      <parent>DHCPShortcut</parent>
-      <rank>6</rank>
+    <menu id="DHCPSubClassOption" xsi:type="OQLMenuNode" _delta="define">
+      <parent>DHCPOptions</parent>
+      <rank>80</rank>
       <oql>SELECT DHCPOptionSubClass</oql>
       <do_search>1</do_search>
     </menu>
-    <menu xsi:type="OQLMenuNode" id="DHCPHostOption" _delta="define">
-      <parent>DHCPShortcut</parent>
-      <rank>7</rank>
+    <menu id="DHCPHostOption" xsi:type="OQLMenuNode" _delta="define">
+      <parent>DHCPOptions</parent>
+      <rank>90</rank>
       <oql>SELECT DHCPOptionHost</oql>
       <do_search>1</do_search>
     </menu>
