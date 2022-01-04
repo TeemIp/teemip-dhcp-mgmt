@@ -197,7 +197,7 @@ Dict::Add('EN US', 'English', 'English', array(
 	'Menu:DHCPSpace' => 'DHCP Space',
 	'Menu:DHCPSpace:Options' => 'Options',
 	'Menu:DHCPServers' => 'Servers',
-	'Menu:DHCPServers+' => 'List of functional CIs attached to an IPR Range as DHCP servers',
+	'Menu:DHCPServers+' => 'List of functional CIs attached to an IP Range as DHCP servers',
 	'Menu:DHCPRanges' => 'Ranges',
 	'Menu:DHCPRanges+' => 'List of all IP ranges set as DHCP pools',
 	'Menu:DHCPOptions' => 'DHCP Options',
