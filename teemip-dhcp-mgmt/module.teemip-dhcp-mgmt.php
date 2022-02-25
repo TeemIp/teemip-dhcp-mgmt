@@ -6,13 +6,13 @@
 
 SetupWebPage::AddModule(
 	__FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-	'teemip-dhcp-mgmt/0.2.1',
+	'teemip-dhcp-mgmt/3.0.0',
 	array(
 		// Identification
 		//
 		'label' => 'DHCP Management',
 		'category' => 'business',
-		
+
 		// Setup
 		//
 		'dependencies' => array(
