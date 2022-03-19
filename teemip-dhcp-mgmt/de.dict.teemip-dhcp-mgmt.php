@@ -13,23 +13,23 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
 	'Class:DHCPOption+' => '',
 	'Class:DHCPOption/Attribute:name' => 'Name',
 	'Class:DHCPOption/Attribute:name+' => '',
-	'Class:DHCPOption/Attribute:isc_name' => 'ISC name',
+	'Class:DHCPOption/Attribute:isc_name' => 'ISC Name',
 	'Class:DHCPOption/Attribute:isc_name+' => '',
 	'Class:DHCPOption/Attribute:code' => 'Code',
 	'Class:DHCPOption/Attribute:code+' => '',
 	'Class:DHCPOption/Attribute:dhcpv4' => 'DHCPv4',
 	'Class:DHCPOption/Attribute:dhcpv4+' => '',
-	'Class:DHCPOption/Attribute:dhcpv4/Value:yes' => 'Yes',
-	'Class:DHCPOption/Attribute:dhcpv4/Value:no' => 'No',
-	'Class:DHCPOption/Attribute:type' => 'Type',
+	'Class:DHCPOption/Attribute:dhcpv4/Value:yes' => 'Ja',
+	'Class:DHCPOption/Attribute:dhcpv4/Value:no' => 'Nein',
+	'Class:DHCPOption/Attribute:type' => 'Typ',
 	'Class:DHCPOption/Attribute:type+' => '',
-	'Class:DHCPOption/Attribute:description' => 'Description',
+	'Class:DHCPOption/Attribute:description' => 'Beschreibung',
 	'Class:DHCPOption/Attribute:description+' => '',
-	'Class:DHCPOption/Attribute:value' => 'Value',
+	'Class:DHCPOption/Attribute:value' => 'Wert',
 	'Class:DHCPOption/Attribute:value+' => '',
-	'Class:DHCPOption/Attribute:org_id' => 'Organization',
+	'Class:DHCPOption/Attribute:org_id' => 'Organisation',
 	'Class:DHCPOption/Attribute:org_id+' => '',
-	'Class:DHCPOption/Attribute:org_name' => 'Organization name',
+	'Class:DHCPOption/Attribute:org_name' => 'Organisationsname',
 	'Class:DHCPOption/Attribute:org_name+' => '',
 ));
 
@@ -39,10 +39,10 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
 
 Dict::Add('DE DE', 'German', 'Deutsch', array(
 	'Class:DHCPOptionGlobal/Name' => '%1$s',
-	'Class:DHCPOptionGlobal' => 'Global DHCP Option',
-	'Class:DHCPOptionGlobal+' => 'DHCP option for global scope',
-	'DHCPOptionGlobal:General' => 'DHCP Attributes',
-	'DHCPOptionGlobal:Scope' => 'Scope',
+	'Class:DHCPOptionGlobal' => 'Globale DHCP Option',
+	'Class:DHCPOptionGlobal+' => 'DHCP Option für den globalen Bereich',
+	'DHCPOptionGlobal:General' => 'DHCP Eigenschaften',
+	'DHCPOptionGlobal:Scope' => 'Bereich',
 ));
 
 //
@@ -51,14 +51,14 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
 
 Dict::Add('DE DE', 'German', 'Deutsch', array(
 	'Class:DHCPOptionSharedNetwork/Name' => '%1$s',
-	'Class:DHCPOptionSharedNetwork' => 'Shared Network DHCP Option',
-	'Class:DHCPOptionSharedNetwork+' => 'DHCP option for shared network scope',
+	'Class:DHCPOptionSharedNetwork' => 'shared-network DHCP Option',
+	'Class:DHCPOptionSharedNetwork+' => 'DHCP Option für den shared-network Bereich',
 	'Class:DHCPOptionSharedNetwork/Attribute:vlan_id' => 'VLAN',
 	'Class:DHCPOptionSharedNetwork/Attribute:vlan_id+' => '',
 	'Class:DHCPOptionSharedNetwork/Attribute:vlan_tag' => 'VLAN Tag',
 	'Class:DHCPOptionSharedNetwork/Attribute:vlan_tag+' => '',
-	'DHCPOptionSharedNetwork:General' => 'DHCP Attributes',
-	'DHCPOptionSharedNetwork:Scope' => 'Scope',
+	'DHCPOptionSharedNetwork:General' => 'DHCP Eigenschaften',
+	'DHCPOptionSharedNetwork:Scope' => 'Bereich',
 ));
 
 //
@@ -67,14 +67,14 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
 
 Dict::Add('DE DE', 'German', 'Deutsch', array(
 	'Class:DHCPOptionSubnet/Name' => '%1$s',
-	'Class:DHCPOptionSubnet' => 'Subnet DHCP Option',
-	'Class:DHCPOptionSubnet+' => 'DHCP option for subnet scope',
-	'Class:DHCPOptionSubnet/Attribute:ipsubnet_id' => 'Subnet',
+	'Class:DHCPOptionSubnet' => 'Subnetz DHCP Option',
+	'Class:DHCPOptionSubnet+' => 'DHCP Option für den Subnetzbereich',
+	'Class:DHCPOptionSubnet/Attribute:ipsubnet_id' => 'Subnetz',
 	'Class:DHCPOptionSubnet/Attribute:ipsubnet_id+' => '',
-	'Class:DHCPOptionSubnet/Attribute:ipsubnet_name' => 'Subnet name',
+	'Class:DHCPOptionSubnet/Attribute:ipsubnet_name' => 'Subnetzname',
 	'Class:DHCPOptionSubnet/Attribute:ipsubnet_name+' => '',
-	'DHCPOptionSubnet:General' => 'DHCP Attributes',
-	'DHCPOptionSubnet:Scope' => 'Scope',
+	'DHCPOptionSubnet:General' => 'DHCP Eigenschaften',
+	'DHCPOptionSubnet:Scope' => 'Bereich',
 ));
 
 //
@@ -84,15 +84,15 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
 Dict::Add('DE DE', 'German', 'Deutsch', array(
 	'Class:DHCPOptionPool/Name' => '%1$s',
 	'Class:DHCPOptionPool' => 'Pool DHCP Option',
-	'Class:DHCPOptionPool+' => 'DHCP option for pool scope',
-	'Class:DHCPOptionPool/Attribute:iprange_id_finalclass_recall' => 'IP Bereich Type',
+	'Class:DHCPOptionPool+' => 'DHCP Option für den pool Bereich',
+	'Class:DHCPOptionPool/Attribute:iprange_id_finalclass_recall' => 'IP-Bereich Typ',
 	'Class:DHCPOptionPool/Attribute:iprange_id_finalclass_recall+' => '',
-	'Class:DHCPOptionPool/Attribute:iprange_id' => 'IP Range',
+	'Class:DHCPOptionPool/Attribute:iprange_id' => 'IP-Bereich',
 	'Class:DHCPOptionPool/Attribute:iprange_id+' => '',
-	'Class:DHCPOptionPool/Attribute:iprange_name' => 'IP Range name',
+	'Class:DHCPOptionPool/Attribute:iprange_name' => 'IP-Bereich Name',
 	'Class:DHCPOptionPool/Attribute:iprange_name+' => '',
-	'DHCPOptionPool:General' => 'DHCP Attributes',
-	'DHCPOptionPool:Scope' => 'Scope',
+	'DHCPOptionPool:General' => 'DHCP Eigenschaften',
+	'DHCPOptionPool:Scope' => 'Bereich',
 ));
 
 //
@@ -102,13 +102,13 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
 Dict::Add('DE DE', 'German', 'Deutsch', array(
 	'Class:DHCPOptionClass/Name' => '%1$s',
 	'Class:DHCPOptionClass' => 'Class DHCP Option',
-	'Class:DHCPOptionClass+' => 'DHCP option for class scope',
+	'Class:DHCPOptionClass+' => 'DHCP Option für den class Bereich',
 	'Class:DHCPOptionClass/Attribute:dhcpclass_id' => 'Class',
 	'Class:DHCPOptionClass/Attribute:dhcpclass_id+' => '',
-	'Class:DHCPOptionClass/Attribute:dhcpclass_name' => 'DHCP Class name',
+	'Class:DHCPOptionClass/Attribute:dhcpclass_name' => 'DHCP Class Name',
 	'Class:DHCPOptionClass/Attribute:dhcpclass_name+' => '',
-	'DHCPOptionClass:General' => 'DHCP Attributes',
-	'DHCPOptionClass:Scope' => 'Scope',
+	'DHCPOptionClass:General' => 'DHCP Eigenschaften',
+	'DHCPOptionClass:Scope' => 'Bereich',
 ));
 
 //
@@ -117,18 +117,18 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
 
 Dict::Add('DE DE', 'German', 'Deutsch', array(
 	'Class:DHCPOptionSubClass/Name' => '%1$s',
-	'Class:DHCPOptionSubClass' => 'SubClass DHCP Option',
-	'Class:DHCPOptionSubClass+' => 'DHCP option for sub-class scope',
+	'Class:DHCPOptionSubClass' => 'Sub-Class DHCP Option',
+	'Class:DHCPOptionSubClass+' => 'DHCP option für den sub-class Bereich',
 	'Class:DHCPOptionSubClass/Attribute:dhcpclass_id' => 'Class',
 	'Class:DHCPOptionSubClass/Attribute:dhcpclass_id+' => '',
-	'Class:DHCPOptionSubClass/Attribute:dhcpclass_name' => 'DHCP Class name',
+	'Class:DHCPOptionSubClass/Attribute:dhcpclass_name' => 'DHCP Class Name',
 	'Class:DHCPOptionSubClass/Attribute:dhcpclass_name+' => '',
 	'Class:DHCPOptionSubClass/Attribute:dhcpsubclass_id' => 'SubClass',
 	'Class:DHCPOptionSubClass/Attribute:dhcpsubclass_id+' => '',
-	'Class:DHCPOptionSubClass/Attribute:dhcpsubclass_name' => 'DHCP SubClass name',
+	'Class:DHCPOptionSubClass/Attribute:dhcpsubclass_name' => 'DHCP SubClass Name',
 	'Class:DHCPOptionSubClass/Attribute:dhcpsubclass_name+' => '',
-	'DHCPOptionSubClass:General' => 'Attributs DHCP',
-	'DHCPOptionSubClass:Scope' => 'Scope',
+	'DHCPOptionSubClass:General' => 'DHCP Eigenschaften',
+	'DHCPOptionSubClass:Scope' => 'Bereich',
 ));
 
 //
@@ -138,13 +138,13 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
 Dict::Add('DE DE', 'German', 'Deutsch', array(
 	'Class:DHCPOptionHost/Name' => '%1$s',
 	'Class:DHCPOptionHost' => 'Host DHCP Option',
-	'Class:DHCPOptionHost+' => 'DHCP option for host scope',
+	'Class:DHCPOptionHost+' => 'DHCP Option für den host Bereich',
 	'Class:DHCPOptionHost/Attribute:physicaldevice_id' => 'Host',
 	'Class:DHCPOptionHost/Attribute:physicaldevice_id+' => '',
-	'Class:DHCPOptionHost/Attribute:physicaldevice_name' => 'Host name',
+	'Class:DHCPOptionHost/Attribute:physicaldevice_name' => 'Hostname',
 	'Class:DHCPOptionHost/Attribute:physicaldevice_name+' => '',
-	'DHCPOptionHost:General' => 'DHCP Attributes',
-	'DHCPOptionHost:Scope' => 'Scope',
+	'DHCPOptionHost:General' => 'DHCP Eigenschaften',
+	'DHCPOptionHost:Scope' => 'Bereich',
 ));
 
 //
@@ -167,7 +167,7 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
 	'Class:DHCPSubClass+' => '',
 	'Class:DHCPSubClass/Attribute:dhcpclass_id' => 'DHCP Class',
 	'Class:DHCPSubClass/Attribute:dhcpclass_id+' => '',
-	'Class:DHCPSubClass/Attribute:dhcpclass_name' => 'DHCP Class name',
+	'Class:DHCPSubClass/Attribute:dhcpclass_name' => 'DHCP Classname',
 	'Class:DHCPSubClass/Attribute:dhcpclass_name+' => '',
 ));
 
@@ -176,8 +176,8 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
 //
 
 Dict::Add('DE DE', 'German', 'Deutsch', array(
-	'Class:PhysicalDevice/Tab:dhcpoptionhosts_list' => 'DHCP Options',
-	'Class:PhysicalDevice/Tab:dhcpoptionhosts_list+' => 'List of all DHCP options attached to the Physical Device',
+	'Class:PhysicalDevice/Tab:dhcpoptionhosts_list' => 'DHCP Optionen',
+	'Class:PhysicalDevice/Tab:dhcpoptionhosts_list+' => 'Liste aller, mit dem physischen Gerät, verknüpften DHCP Optionen',
 ));
 
 //
@@ -185,38 +185,38 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
 //
 
 Dict::Add('DE DE', 'German', 'Deutsch', array(
-	'Class:IPRange/Tab:dhcpoptionpools_list' => 'DHCP Options',
-	'Class:IPRange/Tab:dhcpoptionpools_list+' => 'List of all DHCP options attached to the IP Range',
+	'Class:IPRange/Tab:dhcpoptionpools_list' => 'DHCP Optionen',
+	'Class:IPRange/Tab:dhcpoptionpools_list+' => 'Liste aller, mit dem IP-Bereich, verknüpften DHCP Optionen',
 ));
 
 //
 // Management of options
 //
 Dict::Add('DE DE', 'German', 'Deutsch', array(
-	'Menu:DHCPManagement' => 'DHCP Management',
-	'Menu:DHCPSpace' => 'DHCP Space',
-	'Menu:DHCPSpace:Options' => 'Options',
-	'Menu:DHCPServers' => 'Servers',
-	'Menu:DHCPServers+' => 'List of functional CIs attached to an IP Range as DHCP servers',
-	'Menu:DHCPRanges' => 'Ranges',
-	'Menu:DHCPRanges+' => 'List of all IP ranges set as DHCP pools',
-	'Menu:DHCPOptions' => 'DHCP Options',
-	'Menu:NewDHCPOption' => 'New Option',
-	'Menu:NewDHCPOption+' => 'New DHCP Option',
-	'Menu:SearchDHCPOption' => 'Search for Options',
-	'Menu:SearchDHCPOption+' => 'Search for DHCP Options',
-	'Menu:DHCPGlobalOption' => 'Globals',
-	'Menu:DHCPGlobalOption+' => 'DHCP Global options',
+	'Menu:DHCPManagement' => 'DHCP Verwaltung',
+	'Menu:DHCPSpace' => 'DHCP Bereich',
+	'Menu:DHCPSpace:Options' => 'Optionen',
+	'Menu:DHCPServers' => 'Server',
+	'Menu:DHCPServers+' => 'List von funktionalen CIs welche einen IP-Bereich als DHCP Server zugewiesen sind',
+	'Menu:DHCPRanges' => 'Bereiche',
+	'Menu:DHCPRanges+' => 'Liste von IP-Bereichen welche als DHCP pools gesetzt sind',
+	'Menu:DHCPOptions' => 'DHCP Optionen',
+	'Menu:NewDHCPOption' => 'Neue Option',
+	'Menu:NewDHCPOption+' => 'Neue DHCP Option',
+	'Menu:SearchDHCPOption' => 'Suche nach Optionen',
+	'Menu:SearchDHCPOption+' => 'Suche nach DHCP Optionen',
+	'Menu:DHCPGlobalOption' => 'Global',
+	'Menu:DHCPGlobalOption+' => 'Globale DHCP Optionen',
 	'Menu:DHCPSharedNetworkOption' => 'Shared Networks',
-	'Menu:DHCPSharedNetworkOption+' => 'DHCP Shared Network options',
-	'Menu:DHCPSubnetOption' => 'Subnets',
-	'Menu:DHCPSubnetOption+' => 'DHCP Subnet options',
+	'Menu:DHCPSharedNetworkOption+' => 'DHCP shared-network Optionen',
+	'Menu:DHCPSubnetOption' => 'Subnetze',
+	'Menu:DHCPSubnetOption+' => 'DHCP Subnetz Optionen',
 	'Menu:DHCPPoolOption' => 'Pools',
-	'Menu:DHCPPoolOption+' => 'DHCP Pool options',
+	'Menu:DHCPPoolOption+' => 'DHCP Pool Optionen',
 	'Menu:DHCPClassOption' => 'Classes',
-	'Menu:DHCPClassOption+' => 'DHCP Class options',
+	'Menu:DHCPClassOption+' => 'DHCP Class Optionen',
 	'Menu:DHCPSubClassOption' => 'Sub Classes',
-	'Menu:DHCPSubClassOption+' => 'DHCP Sub Class options',
+	'Menu:DHCPSubClassOption+' => 'DHCP Sub Class Optionen',
 	'Menu:DHCPHostOption' => 'Hosts',
-	'Menu:DHCPHostOption+' => 'DHCP Host options',
+	'Menu:DHCPHostOption+' => 'DHCP Host Optionen',
 ));
