@@ -1,6 +1,6 @@
 <?php
 /*
- * @copyright   Copyright (C) 2021 TeemIp
+ * @copyright   Copyright (C) 2022 TeemIp
  * @license     http://opensource.org/licenses/AGPL-3.0
  */
 
@@ -69,6 +69,8 @@ Dict::Add('EN US', 'English', 'English', array(
 	'Class:DHCPOptionSubnet/Name' => '%1$s',
 	'Class:DHCPOptionSubnet' => 'Subnet DHCP Option',
 	'Class:DHCPOptionSubnet+' => 'DHCP option for subnet scope',
+	'Class:DHCPOptionSubnet/Attribute:ipsubnet_id_finalclass_recall' => 'IP Subnet Type',
+	'Class:DHCPOptionSubnet/Attribute:ipsubnet_id_finalclass_recall+' => '',
 	'Class:DHCPOptionSubnet/Attribute:ipsubnet_id' => 'Subnet',
 	'Class:DHCPOptionSubnet/Attribute:ipsubnet_id+' => '',
 	'Class:DHCPOptionSubnet/Attribute:ipsubnet_name' => 'Subnet name',
@@ -172,12 +174,21 @@ Dict::Add('EN US', 'English', 'English', array(
 ));
 
 //
-// Class: PhysicalDevice
+// Class: VLAN
 //
 
 Dict::Add('EN US', 'English', 'English', array(
-	'Class:PhysicalDevice/Tab:dhcpoptionhosts_list' => 'DHCP Options',
-	'Class:PhysicalDevice/Tab:dhcpoptionhosts_list+' => 'List of all DHCP options attached to the Physical Device',
+	'Class:VLAN/Tab:dhcpoptionsharednetworks_list' => 'DHCP Options',
+	'Class:VLAN/Tab:dhcpoptionsharednetworks_list+' => 'List of all DHCP options attached to the VLAN',
+));
+
+//
+// Class: IPSubnet
+//
+
+Dict::Add('EN US', 'English', 'English', array(
+	'Class:IPSubnet/Tab:dhcpoptionsubnets_list' => 'DHCP Options',
+	'Class:IPSubnet/Tab:dhcpoptionsubnets_list+' => 'List of all DHCP options attached to the Subnet',
 ));
 
 //
@@ -190,11 +201,23 @@ Dict::Add('EN US', 'English', 'English', array(
 ));
 
 //
+// Class: PhysicalDevice
+//
+
+Dict::Add('EN US', 'English', 'English', array(
+	'Class:PhysicalDevice/Tab:dhcpoptionhosts_list' => 'DHCP Options',
+	'Class:PhysicalDevice/Tab:dhcpoptionhosts_list+' => 'List of all DHCP options attached to the Physical Device',
+));
+
+//
 // Management of options
 //
 Dict::Add('EN US', 'English', 'English', array(
 	'Menu:DHCPManagement' => 'DHCP Management',
 	'Menu:DHCPSpace' => 'DHCP Space',
+	'Menu:DHCPSpace:Infrastructure' => 'Infrastructure',
+	'Title:DHCPServers' => 'DHCP Servers',
+	'Title:DHCPRanges' => 'DHCP Ranges',
 	'Menu:DHCPSpace:Options' => 'Options',
 	'Menu:DHCPServers' => 'Servers',
 	'Menu:DHCPServers+' => 'List of functional CIs attached to an IP Range as DHCP servers',

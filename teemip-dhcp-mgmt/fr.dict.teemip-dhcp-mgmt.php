@@ -1,6 +1,6 @@
 <?php
 /*
- * @copyright   Copyright (C) 2021 TeemIp
+ * @copyright   Copyright (C) 2022 TeemIp
  * @license     http://opensource.org/licenses/AGPL-3.0
  */
 
@@ -69,6 +69,8 @@ Dict::Add('FR FR', 'French', 'Français', array(
 	'Class:DHCPOptionSubnet/Name' => '%1$s',
 	'Class:DHCPOptionSubnet' => 'Option DHCP Subnet',
 	'Class:DHCPOptionSubnet+' => 'Option DHCP pour un scope subnet',
+	'Class:DHCPOptionSubnet/Attribute:ipsubnet_id_finalclass_recall' => 'Type de sous-réseau',
+	'Class:DHCPOptionSubnet/Attribute:ipsubnet_id_finalclass_recall+' => '',
 	'Class:DHCPOptionSubnet/Attribute:ipsubnet_id' => 'Sous-réseau',
 	'Class:DHCPOptionSubnet/Attribute:ipsubnet_id+' => '',
 	'Class:DHCPOptionSubnet/Attribute:ipsubnet_name' => 'Nom du sous-réseau',
@@ -172,12 +174,21 @@ Dict::Add('FR FR', 'French', 'Français', array(
 ));
 
 //
-// Class: PhysicalDevice
+// Class: VLAN
 //
 
 Dict::Add('FR FR', 'French', 'Français', array(
-	'Class:PhysicalDevice/Tab:dhcpoptionhosts_list' => 'Options DHCP',
-	'Class:PhysicalDevice/Tab:dhcpoptionhosts_list+' => 'Liste de toutes les options DHCP de scope Host liées à l\'équipement',
+	'Class:VLAN/Tab:dhcpoptionsharednetworks_list' => 'Options DHCP',
+	'Class:VLAN/Tab:dhcpoptionsharednetworks_list+' => 'Liste de toutes les options DHCP de scope Shared Network liées au VLAN',
+));
+
+//
+// Class: IPSubnet
+//
+
+Dict::Add('FR FR', 'French', 'Français', array(
+	'Class:IPSubnet/Tab:dhcpoptionsubnets_list' => 'Options DHCP',
+	'Class:IPSubnet/Tab:dhcpoptionsubnets_list+' => 'Liste de toutes les options DHCP de scope Subnet liées au sous-réseau',
 ));
 
 //
@@ -190,11 +201,23 @@ Dict::Add('FR FR', 'French', 'Français', array(
 ));
 
 //
+// Class: PhysicalDevice
+//
+
+Dict::Add('FR FR', 'French', 'Français', array(
+	'Class:PhysicalDevice/Tab:dhcpoptionhosts_list' => 'Options DHCP',
+	'Class:PhysicalDevice/Tab:dhcpoptionhosts_list+' => 'Liste de toutes les options DHCP de scope Host liées à l\'équipement',
+));
+
+//
 // Management of options
 //
 Dict::Add('FR FR', 'French', 'Français', array(
 	'Menu:DHCPManagement' => 'Gestion du DHCP',
 	'Menu:DHCPSpace' => 'Espace DHCP',
+	'Menu:DHCPSpace:Infrastructure' => 'Infrastructure',
+	'Title:DHCPServers' => 'Servers DHCP',
+	'Title:DHCPRanges' => 'Pools DHCP',
 	'Menu:DHCPSpace:Options' => 'Options',
 	'Menu:DHCPServers' => 'Serveurs',
 	'Menu:DHCPServers+' => 'Liste des CIs functionnels actant comme DHCP server pour une plage d\'adresses IP',
