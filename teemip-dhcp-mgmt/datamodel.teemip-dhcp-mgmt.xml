@@ -2,6 +2,7 @@
 <itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.7">
   <classes>
     <class id="DHCPClass" _delta="define">
+      <parent>Typology</parent>
       <properties>
         <category>bizmodel,searchable</category>
         <abstract>false</abstract>
@@ -43,9 +44,9 @@
           </items>
         </details>
       </presentation>
-      <parent>Typology</parent>
     </class>
     <class id="DHCPSubClass" _delta="define">
+      <parent>Typology</parent>
       <properties>
         <category>bizmodel,searchable</category>
         <abstract>false</abstract>
@@ -119,9 +120,9 @@
           </items>
         </default_search>
       </presentation>
-      <parent>Typology</parent>
     </class>
     <class id="DHCPOption" _delta="define">
+      <parent>cmdbAbstractObject</parent>
       <properties>
         <category>bizmodel,searchable</category>
         <abstract>true</abstract>
@@ -273,14 +274,14 @@
           </items>
         </default_search>
       </presentation>
-      <parent>cmdbAbstractObject</parent>
     </class>
     <class id="DHCPOptionGlobal" _delta="define">
+      <parent>DHCPOption</parent>
       <properties>
         <category>bizmodel,searchable</category>
         <abstract>false</abstract>
         <db_table>dhcpoptionglobal</db_table>
-        <icon>asset/img/global.png</icon>
+        <icon>asset/img/icons8-city-buildings-48.png</icon>
         <naming>
           <attributes>
             <attribute id="name"/>
@@ -401,14 +402,14 @@
           </items>
         </default_search>
       </presentation>
-      <parent>DHCPOption</parent>
     </class>
     <class id="DHCPOptionSharedNetwork" _delta="define">
+      <parent>DHCPOption</parent>
       <properties>
         <category>bizmodel,searchable</category>
         <abstract>false</abstract>
         <db_table>dhcpoptionsharednetwork</db_table>
-        <icon>asset/img/sharednetwork.png</icon>
+        <icon>asset/img/icons8-hierarchy.svg</icon>
         <naming _revision_id="457">
           <attributes>
             <attribute id="name"/>
@@ -557,9 +558,9 @@
           </items>
         </default_search>
       </presentation>
-      <parent>DHCPOption</parent>
     </class>
     <class id="DHCPOptionSubnet" _delta="define">
+      <parent>DHCPOption</parent>
       <properties>
         <category>bizmodel,searchable</category>
         <abstract>false</abstract>
@@ -577,7 +578,7 @@
             <attribute id="org_name"/>
           </attributes>
         </reconciliation>
-        <icon>asset/img/subnet.png</icon>
+        <icon>asset/img/icons8-subnet-48.png</icon>
         <uniqueness_rules _revision_id="455"/>
       </properties>
       <fields>
@@ -715,14 +716,14 @@
           </items>
         </default_search>
       </presentation>
-      <parent>DHCPOption</parent>
     </class>
     <class id="DHCPOptionPool" _delta="define">
+      <parent>DHCPOption</parent>
       <properties>
         <category>bizmodel,searchable</category>
         <abstract>false</abstract>
         <db_table>dhcpoptionpool</db_table>
-        <icon>asset/img/pool.png</icon>
+        <icon>asset/img/icons8-slice-48.png</icon>
         <naming>
           <attributes>
             <attribute id="name"/>
@@ -871,9 +872,9 @@
           </items>
         </default_search>
       </presentation>
-      <parent>DHCPOption</parent>
     </class>
     <class id="DHCPOptionClass" _delta="define">
+      <parent>DHCPOption</parent>
       <properties>
         <category>bizmodel,searchable</category>
         <abstract>false</abstract>
@@ -891,7 +892,7 @@
             <attribute id="org_name"/>
           </attributes>
         </reconciliation>
-        <icon>asset/img/class.png</icon>
+        <icon>asset/img/icons8-folder-48.png</icon>
         <uniqueness_rules/>
       </properties>
       <fields>
@@ -1023,9 +1024,9 @@
           </items>
         </default_search>
       </presentation>
-      <parent>DHCPOption</parent>
     </class>
     <class id="DHCPOptionSubClass" _delta="define">
+      <parent>DHCPOption</parent>
       <properties>
         <category>bizmodel,searchable</category>
         <abstract>false</abstract>
@@ -1043,7 +1044,7 @@
             <attribute id="org_name"/>
           </attributes>
         </reconciliation>
-        <icon>asset/img/subclass.png</icon>
+        <icon>asset/img/icons8-file-submodule-48.png</icon>
         <uniqueness_rules/>
       </properties>
       <fields>
@@ -1193,14 +1194,14 @@
           </items>
         </default_search>
       </presentation>
-      <parent>DHCPOption</parent>
     </class>
     <class id="DHCPOptionHost" _delta="define">
+      <parent>DHCPOption</parent>
       <properties>
         <category>bizmodel,searchable</category>
         <abstract>false</abstract>
         <db_table>dhcpoptionhost</db_table>
-        <icon>asset/img/host.png</icon>
+        <icon>asset/img/icons8-server.svg</icon>
         <naming>
           <attributes>
             <attribute id="name"/>
@@ -1349,21 +1350,20 @@
           </items>
         </default_search>
       </presentation>
-      <parent>DHCPOption</parent>
     </class>
   </classes>
   <menus>
     <menu id="Typology" xsi:type="DashboardMenuNode" _created_in="itop-config-mgmt" _delta="must_exist">
       <definition>
         <cells>
-          <cell id="0" _delta="must_exist">
+          <cell id="IPMgmt" _delta="must_exist">
             <dashlets>
               <dashlet id="11" xsi:type="DashletBadge" _delta="define">
-                <rank>20</rank>
+                <rank>10</rank>
                 <class>DHCPClass</class>
               </dashlet>
               <dashlet id="12" xsi:type="DashletBadge" _delta="define">
-                <rank>30</rank>
+                <rank>11</rank>
                 <class>DHCPSubClass</class>
               </dashlet>
             </dashlets>
@@ -1387,13 +1387,33 @@
         <layout>DashboardLayoutOneCol</layout>
         <title/>
         <cells xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <cell id="teemip-dhcp-100">
+            <rank>1</rank>
+            <dashlets>
+              <dashlet id="teemip-dhcp-101" xsi:type="DashletHeaderStatic">
+                <rank>0</rank>
+                <title>Menu:DHCPSpace:Infrastructure</title>
+                <icon>teemip-ip-mgmt/asset/img/icons8-internet-folder-48.png</icon>
+              </dashlet>
+              <dashlet id="teemip-dhcp-102" xsi:type="DashletBadgeFiltered">
+                <rank>1</rank>
+                <title>Title:DHCPServers</title>
+                <query>SELECT FunctionalCI AS f JOIN lnkFunctionalCIToIPRange AS l ON l.functionalci_id = f.id JOIN IPRange AS ir ON l.iprange_id = ir.id WHERE ir.dhcp = 'dhcp_yes'</query>
+              </dashlet>
+              <dashlet id="teemip-dhcp-103" xsi:type="DashletBadgeFiltered">
+                <rank>2</rank>
+                <title>Title:DHCPRanges</title>
+                <query>SELECT IPRange WHERE dhcp = 'dhcp_yes'</query>
+              </dashlet>
+            </dashlets>
+          </cell>
           <cell id="teemip-dhcp-200">
             <rank>2</rank>
             <dashlets>
               <dashlet id="teemip-dhcp-201" xsi:type="DashletHeaderStatic">
                 <rank>0</rank>
                 <title>Menu:DHCPSpace:Options</title>
-                <icon>teemip-dhcp-mgmt/asset/img/dhcpobject.png</icon>
+                <icon>teemip-ip-mgmt/asset/img/icons8-internet-folder-48.png</icon>
               </dashlet>
               <dashlet id="teemip-dhcp-202" xsi:type="DashletBadge">
                 <rank>1</rank>
@@ -1552,51 +1572,53 @@ class DHCPMgmtApplicationUIExtension implements iApplicationUIExtension
 	 */
 	public function OnDisplayRelations($oObject, WebPage $oPage, $bEditMode = false)
 	{
-   	    // Add DHCP options tab on Physical devices linked to a DHCPOptionHost
-		if ($oObject instanceof PhysicalDevice)
-		{
- 			if (!$bEditMode)
-			{
-				$aProfiles = UserRights::ListProfiles();
-				if (in_array('DHCP Manager', $aProfiles) || in_array('Administrator',$aProfiles))
-				{
-					// Search for host DHCP options
-					$sOQL = "SELECT DHCPOptionHost WHERE physicaldevice_id = :id";
-					$oOptionSet = new CMDBObjectSet(DBObjectSearch::FromOQL($sOQL), array(), array('id' => $oObject->GetKey()));
-					if ($oOptionSet->CountExceeds(0))
-					{
-						$iOptions = $oOptionSet->Count();
-						$oPage->SetCurrentTab(Dict::S('Class:PhysicalDevice/Tab:dhcpoptionhosts_list').' ('.$iOptions.')');
-						$oPage->p(MetaModel::GetClassIcon('DHCPOptionHost').'&nbsp;'.Dict::Format('Class:PhysicalDevice/Tab:dhcpoptionhosts_list+'));
+		if ($bEditMode) {
+			return;
+		}
 
-						$oBlock = new DisplayBlock($oOptionSet->GetFilter(), 'list', false);
-						$oBlock->Display($oPage, 'dhcp_options', array('menu' => false));
-					}
-				}
+		// Add DHCP options tab on Physical devices linked to a DHCPOptionHost
+		if ($oObject instanceof PhysicalDevice) {
+			$aProfiles = UserRights::ListProfiles();
+			if (in_array('DHCP Manager', $aProfiles) || in_array('Administrator', $aProfiles)) {
+				// Search for host DHCP options
+				$sOQL = "SELECT DHCPOptionHost WHERE physicaldevice_id = :id";
+				$oOptionSet = new CMDBObjectSet(DBObjectSearch::FromOQL($sOQL), array(), array('id' => $oObject->GetKey()));
+				TeemIp\TeemIp\Extension\Framework\Helper\IPUtils::DisplayTabContent($oPage, Dict::S('Class:PhysicalDevice/Tab:dhcpoptionhosts_list'), 'dhcp_options', 'DHCPOptionHost', Dict::Format('Class:PhysicalDevice/Tab:dhcpoptionhosts_list+'), '', $oOptionSet);
 			}
 		}
 
 		// Add DHCP options tab on IP Ranges linked to a DHCPOptionPool
-		if ($oObject instanceof IPRange)
-		{
- 			if (!$bEditMode)
-			{
+		if ($oObject instanceof IPRange) {
+			if ($oObject->Get('dhcp') == 'dhcp_yes') {
 				$aProfiles = UserRights::ListProfiles();
-				if (in_array('DHCP Manager', $aProfiles) || in_array('Administrator',$aProfiles))
-				{
+				if (in_array('DHCP Manager', $aProfiles) || in_array('Administrator', $aProfiles)) {
 					// Search for host DHCP options
 					$sOQL = "SELECT DHCPOptionPool WHERE iprange_id = :id";
 					$oOptionSet = new CMDBObjectSet(DBObjectSearch::FromOQL($sOQL), array(), array('id' => $oObject->GetKey()));
-					if ($oOptionSet->CountExceeds(0))
-					{
-						$iOptions = $oOptionSet->Count();
-						$oPage->SetCurrentTab(Dict::S('Class:IPRange/Tab:dhcpoptionpools_list').' ('.$iOptions.')');
-						$oPage->p(MetaModel::GetClassIcon('DHCPOptionPool').'&nbsp;'.Dict::Format('Class:IPRange/Tab:dhcpoptionpools_list+'));
-
-						$oBlock = new DisplayBlock($oOptionSet->GetFilter(), 'list', false);
-						$oBlock->Display($oPage, 'dhcp_options', array('menu' => false));
-					}
+					TeemIp\TeemIp\Extension\Framework\Helper\IPUtils::DisplayTabContent($oPage, Dict::S('Class:IPRange/Tab:dhcpoptionpools_list'), 'dhcp_options', 'DHCPOptionPool', Dict::Format('Class:IPRange/Tab:dhcpoptionpools_list+'), '', $oOptionSet);
 				}
+			}
+		}
+
+		// Add DHCP options tab on IP Subnets linked to a DHCPOptionSubnet
+		if ($oObject instanceof IPSubnet) {
+			$aProfiles = UserRights::ListProfiles();
+			if (in_array('DHCP Manager', $aProfiles) || in_array('Administrator', $aProfiles)) {
+				// Search for host DHCP options
+				$sOQL = "SELECT DHCPOptionSubnet WHERE ipsubnet_id = :id";
+				$oOptionSet = new CMDBObjectSet(DBObjectSearch::FromOQL($sOQL), array(), array('id' => $oObject->GetKey()));
+				TeemIp\TeemIp\Extension\Framework\Helper\IPUtils::DisplayTabContent($oPage, Dict::S('Class:IPSubnet/Tab:dhcpoptionsubnets_list'), 'dhcp_options', 'DHCPOptionSubnet', Dict::Format('Class:IPSubnet/Tab:dhcpoptionsubnets_list+'), '', $oOptionSet);
+			}
+		}
+
+		// Add DHCP options tab on IP Subnets linked to a DHCPOptionSharedNetwork
+		if ($oObject instanceof VLAN) {
+			$aProfiles = UserRights::ListProfiles();
+			if (in_array('DHCP Manager', $aProfiles) || in_array('Administrator', $aProfiles)) {
+				// Search for host DHCP options
+				$sOQL = "SELECT DHCPOptionSharedNetwork WHERE vlan_id = :id";
+				$oOptionSet = new CMDBObjectSet(DBObjectSearch::FromOQL($sOQL), array(), array('id' => $oObject->GetKey()));
+				TeemIp\TeemIp\Extension\Framework\Helper\IPUtils::DisplayTabContent($oPage, Dict::S('Class:VLAN/Tab:dhcpoptionsharednetworks_list'), 'dhcp_options', 'DHCPOptionSharedNetwork', Dict::Format('Class:VLAN/Tab:dhcpoptionsharednetworks_list+'), '', $oOptionSet);
 			}
 		}
 	}
