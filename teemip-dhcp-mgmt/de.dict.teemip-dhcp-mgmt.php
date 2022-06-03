@@ -69,6 +69,8 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
 	'Class:DHCPOptionSubnet/Name' => '%1$s',
 	'Class:DHCPOptionSubnet' => 'Subnetz DHCP Option',
 	'Class:DHCPOptionSubnet+' => 'DHCP Option für den Subnetzbereich',
+	'Class:DHCPOptionSubnet/Attribute:ipsubnet_id_finalclass_recall' => 'Subnetz Typ',
+	'Class:DHCPOptionSubnet/Attribute:ipsubnet_id_finalclass_recall+' => '',
 	'Class:DHCPOptionSubnet/Attribute:ipsubnet_id' => 'Subnetz',
 	'Class:DHCPOptionSubnet/Attribute:ipsubnet_id+' => '',
 	'Class:DHCPOptionSubnet/Attribute:ipsubnet_name' => 'Subnetzname',
@@ -172,12 +174,21 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
 ));
 
 //
-// Class: PhysicalDevice
+// Class: VLAN
 //
 
-Dict::Add('DE DE', 'German', 'Deutsch', array(
-	'Class:PhysicalDevice/Tab:dhcpoptionhosts_list' => 'DHCP Optionen',
-	'Class:PhysicalDevice/Tab:dhcpoptionhosts_list+' => 'Liste aller, mit dem physischen Gerät, verknüpften DHCP Optionen',
+Dict::Add('EN US', 'English', 'English', array(
+	'Class:VLAN/Tab:dhcpoptionsharednetworks_list' => 'DHCP Optionen',
+	'Class:VLAN/Tab:dhcpoptionsharednetworks_list+' => 'Liste aller, mit dem VLAN, verknüpften DHCP Optionen',
+));
+
+//
+// Class: IPSubnet
+//
+
+Dict::Add('EN US', 'English', 'English', array(
+	'Class:IPSubnet/Tab:dhcpoptionsubnets_list' => 'DHCP Optionen',
+	'Class:IPSubnet/Tab:dhcpoptionsubnets_list+' => 'Liste aller, mit dem Subnetz, verknüpften DHCP Optionen',
 ));
 
 //
@@ -190,11 +201,23 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
 ));
 
 //
+// Class: PhysicalDevice
+//
+
+Dict::Add('DE DE', 'German', 'Deutsch', array(
+	'Class:PhysicalDevice/Tab:dhcpoptionhosts_list' => 'DHCP Optionen',
+	'Class:PhysicalDevice/Tab:dhcpoptionhosts_list+' => 'Liste aller, mit dem physischen Gerät, verknüpften DHCP Optionen',
+));
+
+//
 // Management of options
 //
 Dict::Add('DE DE', 'German', 'Deutsch', array(
 	'Menu:DHCPManagement' => 'DHCP Verwaltung',
 	'Menu:DHCPSpace' => 'DHCP Bereich',
+	'Menu:DHCPSpace:Infrastructure' => 'Infrastruktur',
+	'Title:DHCPServers' => 'DHCP Servers',
+	'Title:DHCPRanges' => 'DHCP Bereiche',
 	'Menu:DHCPSpace:Options' => 'Optionen',
 	'Menu:DHCPServers' => 'Server',
 	'Menu:DHCPServers+' => 'List von funktionalen CIs welche einen IP-Bereich als DHCP Server zugewiesen sind',
