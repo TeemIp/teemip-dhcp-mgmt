@@ -127,8 +127,8 @@
         <category>bizmodel,searchable</category>
         <abstract>true</abstract>
         <db_table>dhcpoption</db_table>
-        <reconciliation _revision_id="416">
-          <attributes _revision_id="422">
+        <reconciliation>
+          <attributes>
             <attribute id="code"/>
             <attribute id="finalclass"/>
             <attribute id="org_id"/>
@@ -187,13 +187,13 @@
           <display_style>list</display_style>
           <dependencies/>
         </field>
-        <field id="description" xsi:type="AttributeText" _revision_id="437">
-          <sql _revision_id="437">description</sql>
-          <default_value _revision_id="437"/>
-          <is_null_allowed _revision_id="437">true</is_null_allowed>
-          <validation_pattern _revision_id="437"/>
-          <width _revision_id="437"/>
-          <height _revision_id="437"/>
+        <field id="description" xsi:type="AttributeText">
+          <sql>description</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+          <validation_pattern/>
+          <width/>
+          <height/>
         </field>
         <field id="value" xsi:type="AttributeString">
           <sql>value</sql>
@@ -288,13 +288,13 @@
           </attributes>
         </naming>
         <reconciliation>
-          <attributes _revision_id="424">
+          <attributes>
             <attribute id="code"/>
             <attribute id="org_id"/>
             <attribute id="org_name"/>
           </attributes>
         </reconciliation>
-        <uniqueness_rules _revision_id="450"/>
+        <uniqueness_rules/>
       </properties>
       <fields/>
       <methods/>
@@ -410,20 +410,20 @@
         <abstract>false</abstract>
         <db_table>dhcpoptionsharednetwork</db_table>
         <icon>asset/img/icons8-hierarchy.svg</icon>
-        <naming _revision_id="457">
+        <naming>
           <attributes>
             <attribute id="name"/>
           </attributes>
         </naming>
         <reconciliation>
-          <attributes _revision_id="427">
+          <attributes>
             <attribute id="code"/>
             <attribute id="org_id"/>
             <attribute id="org_name"/>
             <attribute id="vlan_id"/>
           </attributes>
         </reconciliation>
-        <uniqueness_rules _revision_id="453"/>
+        <uniqueness_rules/>
       </properties>
       <fields>
         <field id="vlan_id" xsi:type="AttributeExternalKey">
@@ -571,7 +571,7 @@
           </attributes>
         </naming>
         <reconciliation>
-          <attributes _revision_id="429">
+          <attributes>
             <attribute id="code"/>
             <attribute id="ipsubnet_id"/>
             <attribute id="org_id"/>
@@ -579,20 +579,20 @@
           </attributes>
         </reconciliation>
         <icon>asset/img/icons8-subnet-48.png</icon>
-        <uniqueness_rules _revision_id="455"/>
+        <uniqueness_rules/>
       </properties>
       <fields>
         <field id="ipsubnet_id" xsi:type="AttributeExternalKey">
           <sql>ipsubnet_id</sql>
-          <filter _revision_id="432">SELECT IPSubnet WHERE IF(:this-&gt;dhcpv4 = 'yes', org_id = :this-&gt;org_id AND finalclass = 'IPv4Subnet', org_id = :this-&gt;org_id AND finalclass = "IPv6Subnet")</filter>
-          <dependencies _revision_id="461">
+          <filter>SELECT IPSubnet WHERE IF(:this-&gt;dhcpv4 = 'yes', org_id = :this-&gt;org_id AND finalclass = 'IPv4Subnet', org_id = :this-&gt;org_id AND finalclass = "IPv6Subnet")</filter>
+          <dependencies>
             <attribute id="dhcpv4"/>
             <attribute id="org_id"/>
           </dependencies>
           <is_null_allowed>false</is_null_allowed>
           <target_class>IPSubnet</target_class>
           <on_target_delete>DEL_AUTO</on_target_delete>
-          <label _revision_id="461">Subnet</label>
+          <label>Subnet</label>
         </field>
         <field id="ipsubnet_name" xsi:type="AttributeExternalField">
           <extkey_attcode>ipsubnet_id</extkey_attcode>
@@ -730,19 +730,19 @@
           </attributes>
         </naming>
         <reconciliation>
-          <attributes _revision_id="426">
+          <attributes>
             <attribute id="code"/>
             <attribute id="iprange_id"/>
             <attribute id="org_id"/>
             <attribute id="org_name"/>
           </attributes>
         </reconciliation>
-        <uniqueness_rules _revision_id="452"/>
+        <uniqueness_rules/>
       </properties>
       <fields>
         <field id="iprange_id" xsi:type="AttributeExternalKey">
           <sql>iprange_id</sql>
-          <filter _revision_id="431">SELECT IPRange WHERE IF(:this-&gt;dhcpv4 = 'yes', org_id = :this-&gt;org_id AND finalclass = 'IPv4Range', org_id = :this-&gt;org_id AND finalclass = "IPv6Range")</filter>
+          <filter>SELECT IPRange WHERE IF(:this-&gt;dhcpv4 = 'yes', org_id = :this-&gt;org_id AND finalclass = 'IPv4Range', org_id = :this-&gt;org_id AND finalclass = "IPv6Range")</filter>
           <dependencies>
             <attribute id="org_id"/>
           </dependencies>
@@ -903,7 +903,7 @@
           <is_null_allowed>false</is_null_allowed>
           <target_class>DHCPClass</target_class>
           <on_target_delete>DEL_AUTO</on_target_delete>
-          <label _revision_id="462">Class</label>
+          <label>Class</label>
         </field>
         <field id="dhcpclass_name" xsi:type="AttributeExternalField">
           <extkey_attcode>dhcpclass_id</extkey_attcode>
@@ -1208,14 +1208,14 @@
           </attributes>
         </naming>
         <reconciliation>
-          <attributes _revision_id="425">
+          <attributes>
             <attribute id="code"/>
             <attribute id="org_id"/>
             <attribute id="org_name"/>
             <attribute id="physicaldevice_id"/>
           </attributes>
         </reconciliation>
-        <uniqueness_rules _revision_id="451"/>
+        <uniqueness_rules/>
       </properties>
       <fields>
         <field id="physicaldevice_id" xsi:type="AttributeExternalKey">
