@@ -409,7 +409,7 @@
         <category>bizmodel,searchable</category>
         <abstract>false</abstract>
         <db_table>dhcpoptionsharednetwork</db_table>
-        <icon>asset/img/icons8-hierarchy.svg</icon>
+        <icon>asset/img/icons8-hierarchy.png</icon>
         <naming>
           <attributes>
             <attribute id="name"/>
@@ -1201,7 +1201,7 @@
         <category>bizmodel,searchable</category>
         <abstract>false</abstract>
         <db_table>dhcpoptionhost</db_table>
-        <icon>asset/img/icons8-server.svg</icon>
+        <icon>asset/img/icons8-server.png</icon>
         <naming>
           <attributes>
             <attribute id="name"/>
