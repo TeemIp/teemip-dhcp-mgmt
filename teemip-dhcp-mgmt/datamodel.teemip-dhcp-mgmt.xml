@@ -1579,7 +1579,7 @@ class DHCPMgmtApplicationUIExtension implements iApplicationUIExtension
 		// Add DHCP options tab on Physical devices linked to a DHCPOptionHost
 		// Device must have an IP. Display is restricted to DHCP Mgr and Admin profiles only
 		if ($oObject instanceof PhysicalDevice) {
-			$aClassesWithIPs = IPAddress::GetListOfClassesWIthIP('leaf');
+			$aClassesWithIPs = TeemIp\TeemIp\Extension\Framework\Helper\IPUtils::GetListOfClassesWithIPs();
 			if (array_key_exists(get_class($oObject), $aClassesWithIPs)) {
 				$aProfiles = UserRights::ListProfiles();
 				if (in_array('DHCP Manager', $aProfiles) || in_array('Administrator', $aProfiles)) {
