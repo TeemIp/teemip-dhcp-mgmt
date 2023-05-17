@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.7">
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.0">
   <classes>
     <class id="DHCPClass" _delta="define">
       <parent>Typology</parent>
@@ -157,8 +157,12 @@
         <field id="dhcpv4" xsi:type="AttributeEnum">
           <sql>dhcpv4</sql>
           <values>
-            <value id="yes">yes</value>
-            <value id="no">no</value>
+            <value id="yes">
+              <code>yes</code>
+            </value>
+            <value id="no">
+              <code>no</code>
+            </value>
           </values>
           <default_value>yes</default_value>
           <is_null_allowed>false</is_null_allowed>
@@ -168,19 +172,45 @@
         <field id="type" xsi:type="AttributeEnum">
           <sql>type</sql>
           <values>
-            <value id="ip-address">ip-address</value>
-            <value id="ip6-address">ip6-address</value>
-            <value id="int8">int8</value>
-            <value id="uint8">uint8</value>
-            <value id="int16">int16</value>
-            <value id="uint16">uint16</value>
-            <value id="int32">int32</value>
-            <value id="uint32">uint32</value>
-            <value id="text">text</value>
-            <value id="domain-name">domain-name</value>
-            <value id="domain-list">domain-list</value>
-            <value id="flag">flag</value>
-            <value id="string">string</value>
+            <value id="ip-address">
+              <code>ip-address</code>
+            </value>
+            <value id="ip6-address">
+              <code>ip6-address</code>
+            </value>
+            <value id="int8">
+              <code>int8</code>
+            </value>
+            <value id="uint8">
+              <code>uint8</code>
+            </value>
+            <value id="int16">
+              <code>int16</code>
+            </value>
+            <value id="uint16">
+              <code>uint16</code>
+            </value>
+            <value id="int32">
+              <code>int32</code>
+            </value>
+            <value id="uint32">
+              <code>uint32</code>
+            </value>
+            <value id="text">
+              <code>text</code>
+            </value>
+            <value id="domain-name">
+              <code>domain-name</code>
+            </value>
+            <value id="domain-list">
+              <code>domain-list</code>
+            </value>
+            <value id="flag">
+              <code>flag</code>
+            </value>
+            <value id="string">
+              <code>string</code>
+            </value>
           </values>
           <default_value>string</default_value>
           <is_null_allowed>false</is_null_allowed>
@@ -281,7 +311,9 @@
         <category>bizmodel,searchable</category>
         <abstract>false</abstract>
         <db_table>dhcpoptionglobal</db_table>
-        <icon>asset/img/icons8-city-buildings-48.png</icon>
+        <style>
+          <icon>asset/img/icons8-city-buildings-48.png</icon>
+        </style>
         <naming>
           <attributes>
             <attribute id="name"/>
@@ -409,7 +441,9 @@
         <category>bizmodel,searchable</category>
         <abstract>false</abstract>
         <db_table>dhcpoptionsharednetwork</db_table>
-        <icon>asset/img/icons8-hierarchy.png</icon>
+        <style>
+          <icon>asset/img/icons8-hierarchy.png</icon>
+        </style>
         <naming>
           <attributes>
             <attribute id="name"/>
@@ -578,7 +612,9 @@
             <attribute id="org_name"/>
           </attributes>
         </reconciliation>
-        <icon>asset/img/icons8-subnet-48.png</icon>
+        <style>
+          <icon>asset/img/icons8-subnet-48.png</icon>
+        </style>
         <uniqueness_rules/>
       </properties>
       <fields>
@@ -723,7 +759,9 @@
         <category>bizmodel,searchable</category>
         <abstract>false</abstract>
         <db_table>dhcpoptionpool</db_table>
-        <icon>asset/img/icons8-slice-48.png</icon>
+        <style>
+          <icon>asset/img/icons8-slice-48.png</icon>
+        </style>
         <naming>
           <attributes>
             <attribute id="name"/>
@@ -892,7 +930,9 @@
             <attribute id="org_name"/>
           </attributes>
         </reconciliation>
-        <icon>asset/img/icons8-folder-48.png</icon>
+        <style>
+          <icon>asset/img/icons8-folder-48.png</icon>
+        </style>
         <uniqueness_rules/>
       </properties>
       <fields>
@@ -1044,7 +1084,9 @@
             <attribute id="org_name"/>
           </attributes>
         </reconciliation>
-        <icon>asset/img/icons8-file-submodule-48.png</icon>
+        <style>
+          <icon>asset/img/icons8-file-submodule-48.png</icon>
+        </style>
         <uniqueness_rules/>
       </properties>
       <fields>
@@ -1201,7 +1243,9 @@
         <category>bizmodel,searchable</category>
         <abstract>false</abstract>
         <db_table>dhcpoptionhost</db_table>
-        <icon>asset/img/icons8-server.png</icon>
+        <style>
+          <icon>asset/img/icons8-server.png</icon>
+        </style>
         <naming>
           <attributes>
             <attribute id="name"/>
