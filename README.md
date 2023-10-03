@@ -1,4 +1,4 @@
-# <img src="https://wiki.teemip.net/lib/exe/fetch.php?media=extensions:classicon_dhcp3x.png"> TeemIp DHCP Management
+# <img src="https://wiki.teemip.net/lib/exe/fetch.php?media=extensions:picto_dhcpmanagement.png"> TeemIp DHCP Management
 TeemIp extension that adds DHCP options management features
 
 
