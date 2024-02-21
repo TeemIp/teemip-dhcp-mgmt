@@ -1630,7 +1630,7 @@ class DHCPMgmtApplicationUIExtension implements iApplicationUIExtension
 					// Search for host DHCP options
 					$sOQL = "SELECT DHCPOptionHost WHERE physicaldevice_id = :id";
 					$oOptionSet = new CMDBObjectSet(DBObjectSearch::FromOQL($sOQL), array(), array('id' => $oObject->GetKey()));
-					TeemIp\TeemIp\Extension\Framework\Helper\IPUtils::DisplayTabContent($oPage, Dict::S('Class:PhysicalDevice/Tab:dhcpoptionhosts_list'), 'dhcp_options', 'DHCPOptionHost', Dict::Format('Class:PhysicalDevice/Tab:dhcpoptionhosts_list+'), '', $oOptionSet);
+					TeemIp\TeemIp\Extension\Framework\Helper\IPUtils::DisplayTabContent($oPage, Dict::S('Class:PhysicalDevice/Tab:dhcpoptionhosts_list'), 'dhcp_options', 'DHCPOptionHost', Dict::Format('Class:PhysicalDevice/Tab:dhcpoptionhosts_list+'), '', $oOptionSet, false);
 				}
 			}
 		}
@@ -1643,7 +1643,7 @@ class DHCPMgmtApplicationUIExtension implements iApplicationUIExtension
 					// Search for host DHCP options
 					$sOQL = "SELECT DHCPOptionPool WHERE iprange_id = :id";
 					$oOptionSet = new CMDBObjectSet(DBObjectSearch::FromOQL($sOQL), array(), array('id' => $oObject->GetKey()));
-					TeemIp\TeemIp\Extension\Framework\Helper\IPUtils::DisplayTabContent($oPage, Dict::S('Class:IPRange/Tab:dhcpoptionpools_list'), 'dhcp_options', 'DHCPOptionPool', Dict::Format('Class:IPRange/Tab:dhcpoptionpools_list+'), '', $oOptionSet);
+					TeemIp\TeemIp\Extension\Framework\Helper\IPUtils::DisplayTabContent($oPage, Dict::S('Class:IPRange/Tab:dhcpoptionpools_list'), 'dhcp_options', 'DHCPOptionPool', Dict::Format('Class:IPRange/Tab:dhcpoptionpools_list+'), '', $oOptionSet, false);
 				}
 			}
 		}
@@ -1655,7 +1655,7 @@ class DHCPMgmtApplicationUIExtension implements iApplicationUIExtension
 				// Search for host DHCP options
 				$sOQL = "SELECT DHCPOptionSubnet WHERE ipsubnet_id = :id";
 				$oOptionSet = new CMDBObjectSet(DBObjectSearch::FromOQL($sOQL), array(), array('id' => $oObject->GetKey()));
-				TeemIp\TeemIp\Extension\Framework\Helper\IPUtils::DisplayTabContent($oPage, Dict::S('Class:IPSubnet/Tab:dhcpoptionsubnets_list'), 'dhcp_options', 'DHCPOptionSubnet', Dict::Format('Class:IPSubnet/Tab:dhcpoptionsubnets_list+'), '', $oOptionSet);
+				TeemIp\TeemIp\Extension\Framework\Helper\IPUtils::DisplayTabContent($oPage, Dict::S('Class:IPSubnet/Tab:dhcpoptionsubnets_list'), 'dhcp_options', 'DHCPOptionSubnet', Dict::Format('Class:IPSubnet/Tab:dhcpoptionsubnets_list+'), '', $oOptionSet, false);
 			}
 		}
 
@@ -1666,7 +1666,7 @@ class DHCPMgmtApplicationUIExtension implements iApplicationUIExtension
 				// Search for host DHCP options
 				$sOQL = "SELECT DHCPOptionSharedNetwork WHERE vlan_id = :id";
 				$oOptionSet = new CMDBObjectSet(DBObjectSearch::FromOQL($sOQL), array(), array('id' => $oObject->GetKey()));
-				TeemIp\TeemIp\Extension\Framework\Helper\IPUtils::DisplayTabContent($oPage, Dict::S('Class:VLAN/Tab:dhcpoptionsharednetworks_list'), 'dhcp_options', 'DHCPOptionSharedNetwork', Dict::Format('Class:VLAN/Tab:dhcpoptionsharednetworks_list+'), '', $oOptionSet);
+				TeemIp\TeemIp\Extension\Framework\Helper\IPUtils::DisplayTabContent($oPage, Dict::S('Class:VLAN/Tab:dhcpoptionsharednetworks_list'), 'dhcp_options', 'DHCPOptionSharedNetwork', Dict::Format('Class:VLAN/Tab:dhcpoptionsharednetworks_list+'), '', $oOptionSet, false);
 			}
 		}
 	}
