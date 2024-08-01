@@ -1616,7 +1616,7 @@ class DHCPMgmtApplicationUIExtension implements iApplicationUIExtension
 	 */
 	public function OnDisplayRelations($oObject, WebPage $oPage, $bEditMode = false)
 	{
-		if ($bEditMode) {
+		if ($oObject->GetDisplayMode() != cmdbAbstractObject::ENUM_DISPLAY_MODE_VIEW) {
 			return;
 		}
 
