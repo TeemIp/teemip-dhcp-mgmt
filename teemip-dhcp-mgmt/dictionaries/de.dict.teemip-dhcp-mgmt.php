@@ -1,6 +1,6 @@
 <?php
 /*
- * @copyright   Copyright (C) 2021 TeemIp
+ * @copyright   Copyright (C) 2010-2024 TeemIp
  * @license     http://opensource.org/licenses/AGPL-3.0
  */
 
@@ -177,7 +177,7 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
 // Class: VLAN
 //
 
-Dict::Add('EN US', 'English', 'English', array(
+Dict::Add('DE DE', 'German', 'Deutsch', array(
 	'Class:VLAN/Tab:dhcpoptionsharednetworks_list' => 'DHCP Optionen',
 	'Class:VLAN/Tab:dhcpoptionsharednetworks_list+' => 'Liste aller, mit dem VLAN, verknüpften DHCP Optionen',
 ));
@@ -186,7 +186,7 @@ Dict::Add('EN US', 'English', 'English', array(
 // Class: IPSubnet
 //
 
-Dict::Add('EN US', 'English', 'English', array(
+Dict::Add('DE DE', 'German', 'Deutsch', array(
 	'Class:IPSubnet/Tab:dhcpoptionsubnets_list' => 'DHCP Optionen',
 	'Class:IPSubnet/Tab:dhcpoptionsubnets_list+' => 'Liste aller, mit dem Subnetz, verknüpften DHCP Optionen',
 ));
