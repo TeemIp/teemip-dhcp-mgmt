@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.0" load="strict">
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.2" load="strict"
+  xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/TeemIp/teemip-core-ip-mgmt/refs/heads/master/teemip-framework/doc/design.xsd">
   <classes>
     <class id="DHCPClass" _delta="define">
       <parent>Typology</parent>
@@ -221,7 +222,6 @@
           <sql>description</sql>
           <default_value/>
           <is_null_allowed>true</is_null_allowed>
-          <validation_pattern/>
           <width/>
           <height/>
         </field>
@@ -372,8 +372,10 @@
         <details>
           <items>
             <item id="col:col0">
+              <rank>10</rank>
               <items>
                 <item id="fieldset:DHCPOptionGlobal:General">
+                  <rank>10</rank>
                   <items>
                     <item id="dhcpv4">
                       <rank>10</rank>
@@ -397,23 +399,21 @@
                       <rank>70</rank>
                     </item>
                   </items>
-                  <rank>10</rank>
                 </item>
               </items>
-              <rank>10</rank>
             </item>
             <item id="col:col1">
+              <rank>20</rank>
               <items>
                 <item id="fieldset:DHCPOptionGlobal:Scope">
+                  <rank>10</rank>
                   <items>
                     <item id="org_id">
                       <rank>10</rank>
                     </item>
                   </items>
-                  <rank>10</rank>
                 </item>
               </items>
-              <rank>20</rank>
             </item>
           </items>
         </details>
@@ -524,8 +524,10 @@
         <details>
           <items>
             <item id="col:col0">
+              <rank>10</rank>
               <items>
                 <item id="fieldset:DHCPOptionSharedNetwork:General">
+                  <rank>10</rank>
                   <items>
                     <item id="dhcpv4">
                       <rank>10</rank>
@@ -549,14 +551,14 @@
                       <rank>70</rank>
                     </item>
                   </items>
-                  <rank>10</rank>
                 </item>
               </items>
-              <rank>10</rank>
             </item>
             <item id="col:col1">
+              <rank>20</rank>
               <items>
                 <item id="fieldset:DHCPOptionSharedNetwork:Scope">
+                  <rank>10</rank>
                   <items>
                     <item id="org_id">
                       <rank>10</rank>
@@ -565,10 +567,8 @@
                       <rank>20</rank>
                     </item>
                   </items>
-                  <rank>10</rank>
                 </item>
               </items>
-              <rank>20</rank>
             </item>
           </items>
         </details>
@@ -628,7 +628,6 @@
           <is_null_allowed>false</is_null_allowed>
           <target_class>IPSubnet</target_class>
           <on_target_delete>DEL_AUTO</on_target_delete>
-          <label>Subnet</label>
         </field>
         <field id="ipsubnet_name" xsi:type="AttributeExternalField">
           <extkey_attcode>ipsubnet_id</extkey_attcode>
@@ -684,8 +683,10 @@
         <details>
           <items>
             <item id="col:col0">
+              <rank>10</rank>
               <items>
                 <item id="fieldset:DHCPOptionSubnet:General">
+                  <rank>10</rank>
                   <items>
                     <item id="dhcpv4">
                       <rank>10</rank>
@@ -709,14 +710,14 @@
                       <rank>70</rank>
                     </item>
                   </items>
-                  <rank>10</rank>
                 </item>
               </items>
-              <rank>10</rank>
             </item>
             <item id="col:col1">
+              <rank>20</rank>
               <items>
                 <item id="fieldset:DHCPOptionSubnet:Scope">
+                  <rank>10</rank>
                   <items>
                     <item id="org_id">
                       <rank>10</rank>
@@ -725,10 +726,8 @@
                       <rank>20</rank>
                     </item>
                   </items>
-                  <rank>10</rank>
                 </item>
               </items>
-              <rank>20</rank>
             </item>
           </items>
         </details>
@@ -842,8 +841,10 @@
         <details>
           <items>
             <item id="col:col0">
+              <rank>10</rank>
               <items>
                 <item id="fieldset:DHCPOptionPool:General">
+                  <rank>10</rank>
                   <items>
                     <item id="dhcpv4">
                       <rank>10</rank>
@@ -867,14 +868,14 @@
                       <rank>70</rank>
                     </item>
                   </items>
-                  <rank>10</rank>
                 </item>
               </items>
-              <rank>10</rank>
             </item>
             <item id="col:col1">
+              <rank>20</rank>
               <items>
                 <item id="fieldset:DHCPOptionPool:Scope">
+                  <rank>10</rank>
                   <items>
                     <item id="org_id">
                       <rank>10</rank>
@@ -883,10 +884,8 @@
                       <rank>20</rank>
                     </item>
                   </items>
-                  <rank>10</rank>
                 </item>
               </items>
-              <rank>20</rank>
             </item>
           </items>
         </details>
@@ -943,7 +942,6 @@
           <is_null_allowed>false</is_null_allowed>
           <target_class>DHCPClass</target_class>
           <on_target_delete>DEL_AUTO</on_target_delete>
-          <label>Class</label>
         </field>
         <field id="dhcpclass_name" xsi:type="AttributeExternalField">
           <extkey_attcode>dhcpclass_id</extkey_attcode>
@@ -999,8 +997,10 @@
         <details>
           <items>
             <item id="col:col0">
+              <rank>10</rank>
               <items>
                 <item id="fieldset:DHCPOptionClass:General">
+                  <rank>10</rank>
                   <items>
                     <item id="dhcpv4">
                       <rank>10</rank>
@@ -1024,14 +1024,14 @@
                       <rank>70</rank>
                     </item>
                   </items>
-                  <rank>10</rank>
                 </item>
               </items>
-              <rank>10</rank>
             </item>
             <item id="col:col1">
+              <rank>20</rank>
               <items>
                 <item id="fieldset:DHCPOptionClass:Scope">
+                  <rank>10</rank>
                   <items>
                     <item id="org_id">
                       <rank>10</rank>
@@ -1040,10 +1040,8 @@
                       <rank>20</rank>
                     </item>
                   </items>
-                  <rank>10</rank>
                 </item>
               </items>
-              <rank>20</rank>
             </item>
           </items>
         </details>
@@ -1097,7 +1095,6 @@
           <is_null_allowed>false</is_null_allowed>
           <target_class>DHCPClass</target_class>
           <on_target_delete>DEL_AUTO</on_target_delete>
-          <label>DHCP Class</label>
         </field>
         <field id="dhcpclass_name" xsi:type="AttributeExternalField">
           <extkey_attcode>dhcpclass_id</extkey_attcode>
@@ -1112,7 +1109,6 @@
           <is_null_allowed>false</is_null_allowed>
           <target_class>DHCPSubClass</target_class>
           <on_target_delete>DEL_AUTO</on_target_delete>
-          <label>DHCP SubClass</label>
         </field>
         <field id="dhcpsubclass_name" xsi:type="AttributeExternalField">
           <extkey_attcode>dhcpsubclass_id</extkey_attcode>
@@ -1168,8 +1164,10 @@
         <details>
           <items>
             <item id="col:col0">
+              <rank>10</rank>
               <items>
                 <item id="fieldset:DHCPOptionSubClass:General">
+                  <rank>10</rank>
                   <items>
                     <item id="dhcpv4">
                       <rank>10</rank>
@@ -1193,14 +1191,14 @@
                       <rank>70</rank>
                     </item>
                   </items>
-                  <rank>10</rank>
                 </item>
               </items>
-              <rank>10</rank>
             </item>
             <item id="col:col1">
+              <rank>20</rank>
               <items>
                 <item id="fieldset:DHCPOptionSubClass:Scope">
+                  <rank>10</rank>
                   <items>
                     <item id="org_id">
                       <rank>10</rank>
@@ -1212,10 +1210,8 @@
                       <rank>30</rank>
                     </item>
                   </items>
-                  <rank>10</rank>
                 </item>
               </items>
-              <rank>20</rank>
             </item>
           </items>
         </details>
@@ -1326,8 +1322,10 @@
         <details>
           <items>
             <item id="col:col0">
+              <rank>10</rank>
               <items>
                 <item id="fieldset:DHCPOptionHost:General">
+                  <rank>10</rank>
                   <items>
                     <item id="dhcpv4">
                       <rank>10</rank>
@@ -1351,14 +1349,14 @@
                       <rank>70</rank>
                     </item>
                   </items>
-                  <rank>10</rank>
                 </item>
               </items>
-              <rank>10</rank>
             </item>
             <item id="col:col1">
+              <rank>20</rank>
               <items>
                 <item id="fieldset:DHCPOptionHost:Scope">
+                  <rank>10</rank>
                   <items>
                     <item id="org_id">
                       <rank>10</rank>
@@ -1367,10 +1365,8 @@
                       <rank>20</rank>
                     </item>
                   </items>
-                  <rank>10</rank>
                 </item>
               </items>
-              <rank>20</rank>
             </item>
           </items>
         </details>
